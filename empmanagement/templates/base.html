@@ -1,6 +1,5 @@
 {% load static %}
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,70 +36,66 @@
         <div class="menu-bar">
             <div class="menu">
 
-                <li class="search-box">
-                    <i class='bx bx-search icon'></i>
-                    <input type="text" placeholder="Search...">
-                </li>
-
                 <ul class="menu-links">
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="/ems/dashboard">
                             <i class='bx bx-home-alt icon' ></i>
                             <span class="text nav-text">Dashboard</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="work">
+                        <a href="/ems/assignwork">
                             <i class='bx bx-bar-chart-alt-2 icon' ></i>
-                            <span class="text nav-text">Work</span>
+                            <span class="text nav-text">Assign Work</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="/ems/notice">
                             <i class='bx bx-bell icon'></i>
                             <span class="text nav-text">Notice</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="request">
+                        <a href="/ems/makeRequest">
                             <i class='bx bx-message-error icon' ></i>
                             <span class="text nav-text">Request</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="/ems/attendance">
                             <i class='bx bx-calendar icon' ></i>
                             <span class="text nav-text">Attendance</span>
                         </a>
                     </li>
 
+                    <li class="nav-link">
+                        <a href="/ems/mywork">
+                            <i class='bx bx-task icon'></i>
+                            <span class="text nav-text">My Work</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="/ems/editAW">
+                            <i class='bx bx-edit-alt icon' ></i>
+                            <span class="text nav-text">Edit Assigned Works</span>
+                        </a>
+                    </li>
+                    
                 </ul>
             </div>
 
             <div class="bottom-content">
                 <li class="">
-                    <a href="#">
+                    <a href="/logout">
                         <i class='bx bx-log-out icon' ></i>
                         <span class="text nav-text">Logout</span>
                     </a>
-                </li>
-
-                <li class="mode">
-                    <div class="sun-moon">
-                        <i class='bx bx-moon icon moon'></i>
-                        <i class='bx bx-sun icon sun'></i>
-                    </div>
-                    <span class="mode-text text">Dark mode</span>
-
-                    <div class="toggle-switch">
-                        <span class="switch"></span>
-                    </div>
-                </li>
-                
+                </li>                
             </div>
         </div>
 

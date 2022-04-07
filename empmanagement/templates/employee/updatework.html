@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="home">
+    <div class="text">
+        Edit Work
+            <form  method="post">
+                {% csrf_token %}
+                <div class="flex flex-col">
+                    <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                      <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                        <div class="overflow-hidden">
+                          <table class="min-w-full ">
+                            <thead class="bg-white border-b">
+                              <tr>
+                                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                  <div class="text" style="font-size: 18px; padding:5px 0px; color:black;">Enter Details Here.</div>
+                                </th>
+                                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                  
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                             <!-- Employee ID -->
+                             <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                Select Assign work to Employee ID
+                              </td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                <div hidden>{{filledForm.assignerId}}</div>
+                                  {{filledForm.taskerId}}
+                              </td>
+                            </tr>
+                               <!-- Employee First Name -->
+                              <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                  Write Work Details
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                  <div style="border: 1px solid black; width: min-content; height: min-content; padding: 4px;">{{filledForm.work}}</div>
+                                </td>
+                              </tr>
+                              <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                  Select Assign Date
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    {{filledForm.assignDate}}
+                                </td>
+                              </tr>
+                              <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                  Select Due Date
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    {{filledForm.dueDate}}
+                                </td>
+                              </tr>
+                              
+                              <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                  
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <input type="submit" style="height:45px; width:150px; border-radius: 20px; background-color: #6366f1; color:white;" value="Submit">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {% if flag != "" %}
+                <script>
+                  alert('{{ flag }}');
+                </script>
+                {% endif %}
+            </form>     
+            
+    
+</section>
+{% endblock %}

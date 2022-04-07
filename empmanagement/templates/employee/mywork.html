@@ -1,9 +1,10 @@
+
 {% extends 'base.html' %}
 
 {% block content %}
 <section class="home">
     <div class="text">
-        Notices    
+        My Work 
     </div>
     <div class="max-w-xl mx-auto">
       <div
@@ -11,23 +12,32 @@
          >
       <div class="flex justify-between items-center mb-4">
          <h3 class="text-xl font-bold leading-none text-gray-900 dark:text-white">
-            Notices
+            Works
          </h3>
       </div>
       <div class="flow-root">
       <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-      {% for info in notices %}
+      {% for info in work %}
       <div class="flex items-center space-x-4">
          <div class="flex-1 min-w-0">
             <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-               <b>{{info.title}}</b>
+               Assigned By: <b>{{info.assignerId}}</b>
             </p>
          </div>
       </div>
-      {{info.publishDate}}<br>
-      <a style="color:blueviolet;" href = "{% url 'noticedetail' id=info.Id %}">View Details</a>
+      Assigned Date: {{info.assignDate}}<br>
+      Due Date: {{info.dueDate}}<br>
+      <div style="overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1; /* number of lines to show */
+              line-clamp: 1; 
+      -webkit-box-orient: vertical;">
+      <b>Work Details : </b> {{info.work}}<br>
+   </div>
+      <a style="color:blueviolet;" href = "{% url 'workdetails' wid=info.id %}">View Details</a>
       <br>
-      <hr>
+      <div style="height: 2px; width: 500; background-color: black; border-radius: 10px; margin:10px 0px;"></div>
       {% endfor %}
     
 </section>

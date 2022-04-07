@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'employee.apps.EmployeeConfig',
+    'accounts.apps.AccountsConfig',
     'djangocms_admin_style',
     'django.contrib.admin',
     'django.contrib.auth',

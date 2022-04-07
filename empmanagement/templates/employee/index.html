@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="home">
+    <div class="text">
+        Dashboard
+    {% for info in info %}
+    <div class="flex flex-col">
+        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+            <div class="overflow-hidden">
+              <table class="min-w-full">
+                <thead class="bg-white border-b">
+                  <tr>
+                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                      <div class="text" style="font-size: 18px; padding:5px 0px; color:black;">Hello, {{info.firstName}}</div>
+                    </th>
+                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                    YOUR INFO
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                 <!-- Employee ID -->
+                  <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                      Employee ID
+                    </td>
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        {{user.username}}
+                    </td>
+                  </tr>
+                   <!-- Employee First Name -->
+                  <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                      First Name
+                    </td>
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                      {{info.firstName}}
+                    </td>
+                  </tr>
+                  <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                      Middle Name
+                    </td>
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        {{info.middleName}}
+                    </td>
+                  </tr>
+                  <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                      Last Name
+                    </td>
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        {{info.lastName}}
+                    </td>
+                  </tr>
+                  <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                      Phone Number
+                    </td>
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        {{info.phoneNo}}
+                    </td>
+                  </tr>
+                  <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                      Email
+                    </td>
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        {{info.email}}
+                    </td>
+                  </tr>
+                  <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                      Date of Birth:
+                    </td>
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        {{info.dOB}}
+                    </td>
+                  </tr>
+                  <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                      Aadhar Number:
+                    </td>
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        {{info.addharNo}}
+                    </td>
+                  </tr>
+                  <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                    Designation:
+                    </td>
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        {{info.designation}}
+                    </td>
+                  </tr>
+                  <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                      Salary:
+                    </td>
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        {{info.salary}}
+                    </td>
+                  </tr>
+                  <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                      Joining Date:
+                    </td>
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        {{info.joinDate}}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+        
+    {% endfor %}
+    
+    
+</section>
+{% endblock %}
